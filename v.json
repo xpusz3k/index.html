@@ -1,0 +1,35 @@
+{
+    "user": {
+        "country": {
+            "value": "US"
+        },
+        "id": {
+            "value": "piomajer68@gmail.com",
+            "allow_modify": false,
+            "hidden": true
+        },
+        "email": {
+            "value": "piomajer68@gmail.com",
+            "allow_modify": false,
+            "hidden": false
+        }
+    },
+    "settings": {
+        "language": "en",
+        "project_id": 195831,
+        "mode": "sandbox"
+    },
+    "purchase": {
+        "description": {
+            "value": "Test Purchase"
+        },
+        "checkout": {
+            "amount": 998,
+            "currency": "USD"
+        },
+        "subscription": {
+            "plan_id": "Gk2Y7s10",
+            "trial_days": 4
+        }
+    }
+}

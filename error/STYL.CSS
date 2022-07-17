@@ -1,0 +1,19 @@
+#title {
+    text-align: center;
+    color: aliceblue;
+     font-size: larger;
+     background-color: black;
+     width: 200PX;
+     margin-left: 799PX;
+}
+@media screen and (max-width: 720px ){
+    #title {
+        margin-left: -900px;
+     ;
+    color: aliceblue;
+     font-size: larger;
+     background-color: black;
+     width: 200PX;
+    
+    }
+}

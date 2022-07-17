@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styls.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    [class*="col-"] {
+      float: left;
+      padding: 15px;
+    }
+
+    html {
+      font-family: "Lucida Sans", sans-serif;
+    }
+
+    .header {
+      margin: -8px;
+      padding: -1px;
+      background-color: #4d1fa1;
+      color: #ffffff;
+      padding: 15px;
+    }
+
+    @media only screen and (max-width: 768px) {
+      .header {
+        margin: -8px;
+        padding: -1px;
+        background-color: #4d1fa1;
+        color: #ffffff;
+        padding: 15px;
+        width: 768px;
+      }
+    }
+
+    @media only screen and (max-width: 425px) {
+      .header {
+        margin: -8px;
+        padding: -1px;
+        background-color: #4d1fa1;
+        color: #ffffff;
+        padding: 15px;
+        width: 425px;
+      }
+    }
+
+    @media only screen and (max-width: 720px) {
+      .header {
+        margin: -8px;
+        padding: -1px;
+        background-color: #4d1fa1;
+        color: #ffffff;
+        padding: 15px;
+        width: 720px;
+      }
+    }
+
+    .aside {
+      background-color: #fcfcfc;
+      padding: 15px;
+      color: #ffffff;
+      text-align: center;
+      font-size: 14px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    }
+
+
+    .footer {
+      background-color: #4d1fa1;
+      color: #ffffff;
+      text-align: center;
+      font-size: 12px;
+      padding: 15px;
+      margin: 10px;
+      width: 1920px;
+      margin-left: -8px;
+    }
+
+    @media only screen and (max-width: 768px) {
+      .footer {
+        background-color: #4d1fa1;
+        color: #ffffff;
+        text-align: center;
+        font-size: 12px;
+        padding: 15px;
+        margin: 10px;
+        width: 768px;
+        margin-left: -8px;
+      }
+    }
+
+    @media only screen and (max-width: 720px) {
+      .footer {
+        background-color: #4d1fa1;
+        color: #ffffff;
+        text-align: center;
+        font-size: 12px;
+        padding: 15px;
+        margin: 10px;
+        width: 720px;
+        margin-left: -8px;
+      }
+    }
+
+    @media only screen and (max-width: 425px) {
+
+      .footer {
+        background-color: #4d1fa1;
+        color: #ffffff;
+        text-align: center;
+        font-size: 12px;
+        padding: 15px;
+        margin: 10px;
+        width: 720px;
+        margin-left: -8px;
+      }
+    }
+
+    /* For mobile phones: */
+    [class*="col-"] {
+      width: 100%;
+    }
+
+
+
+    @media only screen and (max-width: 768px) {
+
+      /* For tablets: */
+      .col-s-1 {
+        width: 8.33%;
+      }
+
+      .col-s-2 {
+        width: 16.66%;
+      }
+
+      .col-s-3 {
+        width: 25%;
+      }
+
+      .col-s-4 {
+        width: 33.33%;
+      }
+
+      .col-s-5 {
+        width: 41.66%;
+      }
+
+      .col-s-6 {
+        width: 50%;
+      }
+
+      .col-s-7 {
+        width: 58.33%;
+      }
+
+      .col-s-8 {
+        width: 66.66%;
+      }
+
+      .col-s-9 {
+        width: 75%;
+      }
+
+      .col-s-10 {
+        width: 83.33%;
+      }
+
+      .col-s-11 {
+        width: 91.66%;
+      }
+
+      .col-s-12 {
+        width: 80%;
+      }
+    }
+
+    @media only screen and (min-width: 800px) {
+
+      /* For desktop: */
+      .col-1 {
+        width: 8.33%;
+      }
+
+      .col-2 {
+        width: 16.66%;
+      }
+
+      .col-3 {
+        width: 25%;
+      }
+
+      .col-4 {
+        width: 33.33%;
+      }
+
+      .col-5 {
+        width: 41.66%;
+      }
+
+      .col-6 {
+        width: 50%;
+      }
+
+      .col-7 {
+        width: 58.33%;
+      }
+
+      .col-8 {
+        width: 66.66%;
+      }
+
+      .col-9 {
+        width: 75%;
+      }
+
+      .col-10 {
+        width: 83.33%;
+      }
+
+      .col-11 {
+        width: 91.66%;
+      }
+
+      .col-12 {
+        width: 100%;
+      }
+    }
+
+    #text {
+      text-align: center;
+    }
+
+    .button {
+      display: inline-block;
+      text-align: center;
+      vertical-align: middle;
+      padding: 12px 23px;
+      border: 0px solid #9b41c9;
+      border-radius: 5px;
+      background: #fc69ff;
+      background: -webkit-gradient(linear, left top, left bottom, from(#fc69ff), to(#9b41c9));
+      background: -moz-linear-gradient(top, #fc69ff, #9b41c9);
+      background: linear-gradient(to bottom, #fc69ff, #9b41c9);
+      font: normal normal normal 29px impact;
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .button:hover,
+    .button:focus {
+      border: 0px solid #c251fb;
+      background: #ff7eff;
+      background: -webkit-gradient(linear, left top, left bottom, from(#ff7eff), to(#ba4ef1));
+      background: -moz-linear-gradient(top, #ff7eff, #ba4ef1);
+      background: linear-gradient(to bottom, #ff7eff, #ba4ef1);
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+
+    .button:active {
+      background: #9b41c9;
+      background: -webkit-gradient(linear, left top, left bottom, from(#9b41c9), to(#9b41c9));
+      background: -moz-linear-gradient(top, #9b41c9, #9b41c9);
+      background: linear-gradient(to bottom, #9b41c9, #9b41c9);
+    }
+  </style>
+  <title> dsk.pev.pl | wspieraj </title>
+
+</head>
+
+<body>
+  <div id="prv-billboard"></div>
+
+  <div class="header">
+    <div id="texxit">
+      <a href="index.htm">
+        <h1>wspieraj</h1>
+      </a>
+    </div>
+    <div id="menui">
+      <li><a href="index.htm">głowna</a></li>
+      <li><a href="/cennik">sklep</a></li>
+      <li><a href="/wspieraj">wspieraj</a></li>
+      <li><a href="/artykul">juz niedlugo ;)</a></li>
+    </div>
+  </div>
+  </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-3 col-s-3 ">
+      <ul>
+
+
+
+      </ul>
+    </div>
+
+    <div class="col-6 col-s-9">
+      <div id="text">
+        <h1>wspierajta mnie</h1>
+        <p>wesprzyj mnie klikając ten przycisk</p>
+
+        <div id="pay-btn">
+          <div id="api-btn">
+            <a class="button" href="koszyk.php">ZAPLAĆ</a>
+
+
+
+
+            <br>
+            <br>
+            <script>
+              var options = {
+                access_token: 'eop57k1boA7nnYPtewZ6KEXJyJADEwRT'
+
+              };
+              var s = document.createElement('script');
+              s.type = "text/javascript";
+              s.async = true;
+              s.src = "https://static.xsolla.com/embed/paystation/1.0.7/widget.min.js";
+              s.addEventListener('load', function (e) {
+                XPayStationWidget.init(options);
+              }, false);
+              var head = document.getElementsByTagName('head')[0];
+              head.appendChild(s);
+            </script>
+
+            <button data-xpaystation-widget-open>Buy Credits</button>
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-3 col-s-12">
+      <iframe src="imagesss.html" style="border: 0;" width="170px" height="620px" scrolling="no"></iframe>
+    </div>
+    <br>
+  </div>
+  </div>
+
+  <div class="footer">
+    <p>&copy; 2022 <a href="https://dsk.pev.pl">
+        <dsk>dsk.pev.pl</dsk>
+      </a></p>
+  </div>
+
+</body>
+
+</html>
