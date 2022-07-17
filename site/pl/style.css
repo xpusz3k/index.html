@@ -10,7 +10,7 @@
     
     
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 800px) {
 .navbar {
 
 
@@ -180,7 +180,7 @@ font-size: 45px;
 	
 
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
 	.box {
 		box-shadow: 0 0 2em rgb(0, 225, 255);
 	display: flex;
@@ -190,14 +190,14 @@ font-size: 45px;
 		background-color: rgba(67, 82, 218, 0.664);
 		width: 200px;
 		height:400px;
-		margin-top: 45px;
+		margin-top: 4px;
 		margin-left: -110PX;
 	
 		
 	}
 	
 	}
-	@media screen and (max-width: 500px) {
+	@media screen and (max-width: 900px) {
 .btn {
 	margin-left: 200px;
 	margin-top: 5px;
@@ -206,7 +206,7 @@ font-size: 45px;
 }
 }
 	
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
 button {
 padding: 2px;
 width: 2px;
