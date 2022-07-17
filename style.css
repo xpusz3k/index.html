@@ -10,7 +10,7 @@
     
     
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 500px) {
 .navbar {
 
 
@@ -18,7 +18,7 @@
     margin-top: -8px;
     margin-left: -12px;
     height: 100px;
-    width: 800px;
+    width: 500px;
     
     
 }
@@ -143,7 +143,7 @@ ol {
 	background: #F2F2F2;
 	color: #444444;
 }
-@media screen and (max-width: 800px){
+@media screen and (max-width: 500px){
 	#menu {position:relative}
 	#menu ul {background:#111;position:absolute;top:100%;right:0;left:0;z-index:3;height:auto;display:none}
 	#menu ul.sub-menus {width:100%;position:static;}
@@ -180,16 +180,16 @@ font-size: 45px;
 	
 
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 500px) {
 	.box {
 		box-shadow: 0 0 2em rgb(0, 225, 255);
-		display: block;
+	display: flex;
 		float: left;
 		box-sizing: border-box;
 		border: rgb(255, 255, 255);
 		background-color: rgba(67, 82, 218, 0.664);
-		width: 400px;
-		height: 600px;
+		width: 200px;
+		height:400px;
 		margin-top: 45px;
 		margin-left: -110PX;
 	
@@ -197,25 +197,52 @@ font-size: 45px;
 	}
 	
 	}
+	@media screen and (max-width: 500px) {
+.btn {
+	margin-left: 200px;
+	margin-top: 5px;
+	width: 50px;
+	height: 50px;
+}
+}
+	
+@media screen and (max-width: 500px) {
+button {
+padding: 2px;
+width: 2px;
+background-color: rgb(11, 228, 156);
+
+}
+
+}
 .btn {
 	margin-left: 100px;
 	margin-top: 500px;
 	width: 100px;
 	height: 100px;
 }
+
 button {
 padding: 20px;
 width: 200px;
 background-color: rgb(11, 228, 156);
-
-
-
 }
 .STO {
 	margin-top: 100px;
 	margin-left: 750px;
+	font-size: 40px;
 }
+#fortms {
+	margin-right: -1700px;
+}
+#links {
+	margin-top: 100px;
+	margin-right: 100px;
+}
+.T {
+	margin-right: 100px;
 
+}
 
 
 
