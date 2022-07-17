@@ -5,7 +5,7 @@
     background-color: hsl(249, 100%, 16%);
     margin-top: -8px;
     margin-left: -12px;
-    height: 100px;
+    height: 150px;
     width: 1924px;
     
     
@@ -17,13 +17,12 @@
     background-color: hsl(249, 100%, 16%);
     margin-top: -8px;
     margin-left: -12px;
-    height: 100px;
-    width: 500px;
+    height: 180px;
+    width: 800px;
     
     
 }
 }
-
 
 .menu {
     display: flex;
@@ -144,7 +143,18 @@ ol {
 	background: #F2F2F2;
 	color: #444444;
 }
-
+@media screen and (max-width: 500px){
+	#menu {position:relative}
+	#menu ul {background:#111;position:absolute;top:100%;right:0;left:0;z-index:3;height:auto;display:none}
+	#menu ul.sub-menus {width:100%;position:static;}
+	#menu ul.sub-menus a {padding-left:30px;}
+	#menu li {display:block;float:none;width:auto;}
+	#menu input, #menu label {position:absolute;top:0;left:0;display:block}
+	#menu input {z-index:4}
+	#menu input:checked + label {color:white}
+	#menu input:checked + label:before {content:"\00d7"}
+	#menu input:checked ~ ul {display:block}
+}
 .TEXT {
 text-align: center;
 text-decoration: underline;
@@ -180,7 +190,7 @@ font-size: 45px;
 		background-color: rgba(67, 82, 218, 0.664);
 		width: 200px;
 		height:400px;
-		margin-top: 4px;
+		margin-top: 45px;
 		margin-left: -110PX;
 	
 		
@@ -189,6 +199,7 @@ font-size: 45px;
 	}
 	@media screen and (max-width: 800px) {
 .btn {
+	margin-left: 200px;
 	margin-top: 5px;
 	width: 50px;
 	height: 50px;
@@ -206,7 +217,7 @@ background-color: rgb(11, 228, 156);
 }
 .btn {
 	margin-left: 100px;
-	margin-top: 50px;
+	margin-top: 500px;
 	width: 100px;
 	height: 100px;
 }
@@ -221,7 +232,17 @@ background-color: rgb(11, 228, 156);
 	margin-left: 750px;
 	font-size: 40px;
 }
+#fortms {
+	margin-right: -1700px;
+}
+#links {
+	margin-top: 100px;
+	margin-right: 100px;
+}
+.T {
+	margin-right: 100px;
 
+}
 
 
 
