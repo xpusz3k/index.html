@@ -1,367 +1,91 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/styls.css">
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    .row::after {
-      content: "";
-      clear: both;
-      display: table;
-    }
-
-    [class*="col-"] {
-      float: left;
-      padding: 15px;
-    }
-
-    html {
-      font-family: "Lucida Sans", sans-serif;
-    }
-
-    .header {
-      margin: -8px;
-      padding: -1px;
-      background-color: #4d1fa1;
-      color: #ffffff;
-      padding: 15px;
-    }
-
-    @media only screen and (max-width: 768px) {
-      .header {
-        margin: -8px;
-        padding: -1px;
-        background-color: #4d1fa1;
-        color: #ffffff;
-        padding: 15px;
-        width: 768px;
-      }
-    }
-
-    @media only screen and (max-width: 425px) {
-      .header {
-        margin: -8px;
-        padding: -1px;
-        background-color: #4d1fa1;
-        color: #ffffff;
-        padding: 15px;
-        width: 425px;
-      }
-    }
-
-    @media only screen and (max-width: 720px) {
-      .header {
-        margin: -8px;
-        padding: -1px;
-        background-color: #4d1fa1;
-        color: #ffffff;
-        padding: 15px;
-        width: 720px;
-      }
-    }
-
-    .aside {
-      background-color: #fcfcfc;
-      padding: 15px;
-      color: #ffffff;
-      text-align: center;
-      font-size: 14px;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    }
-
-
-    .footer {
-      background-color: #4d1fa1;
-      color: #ffffff;
-      text-align: center;
-      font-size: 12px;
-      padding: 15px;
-      margin: 10px;
-      width: 1920px;
-      margin-left: -8px;
-    }
-
-    @media only screen and (max-width: 768px) {
-      .footer {
-        background-color: #4d1fa1;
-        color: #ffffff;
-        text-align: center;
-        font-size: 12px;
-        padding: 15px;
-        margin: 10px;
-        width: 768px;
-        margin-left: -8px;
-      }
-    }
-
-    @media only screen and (max-width: 720px) {
-      .footer {
-        background-color: #4d1fa1;
-        color: #ffffff;
-        text-align: center;
-        font-size: 12px;
-        padding: 15px;
-        margin: 10px;
-        width: 720px;
-        margin-left: -8px;
-      }
-    }
-
-    @media only screen and (max-width: 425px) {
-
-      .footer {
-        background-color: #4d1fa1;
-        color: #ffffff;
-        text-align: center;
-        font-size: 12px;
-        padding: 15px;
-        margin: 10px;
-        width: 720px;
-        margin-left: -8px;
-      }
-    }
-
-    /* For mobile phones: */
-    [class*="col-"] {
-      width: 100%;
-    }
-
-
-
-    @media only screen and (max-width: 768px) {
-
-      /* For tablets: */
-      .col-s-1 {
-        width: 8.33%;
-      }
-
-      .col-s-2 {
-        width: 16.66%;
-      }
-
-      .col-s-3 {
-        width: 25%;
-      }
-
-      .col-s-4 {
-        width: 33.33%;
-      }
-
-      .col-s-5 {
-        width: 41.66%;
-      }
-
-      .col-s-6 {
-        width: 50%;
-      }
-
-      .col-s-7 {
-        width: 58.33%;
-      }
-
-      .col-s-8 {
-        width: 66.66%;
-      }
-
-      .col-s-9 {
-        width: 75%;
-      }
-
-      .col-s-10 {
-        width: 83.33%;
-      }
-
-      .col-s-11 {
-        width: 91.66%;
-      }
-
-      .col-s-12 {
-        width: 80%;
-      }
-    }
-
-    @media only screen and (min-width: 800px) {
-
-      /* For desktop: */
-      .col-1 {
-        width: 8.33%;
-      }
-
-      .col-2 {
-        width: 16.66%;
-      }
-
-      .col-3 {
-        width: 25%;
-      }
-
-      .col-4 {
-        width: 33.33%;
-      }
-
-      .col-5 {
-        width: 41.66%;
-      }
-
-      .col-6 {
-        width: 50%;
-      }
-
-      .col-7 {
-        width: 58.33%;
-      }
-
-      .col-8 {
-        width: 66.66%;
-      }
-
-      .col-9 {
-        width: 75%;
-      }
-
-      .col-10 {
-        width: 83.33%;
-      }
-
-      .col-11 {
-        width: 91.66%;
-      }
-
-      .col-12 {
-        width: 100%;
-      }
-    }
-
-    #text {
-      text-align: center;
-    }
-
-    .button {
-      display: inline-block;
-      text-align: center;
-      vertical-align: middle;
-      padding: 12px 23px;
-      border: 0px solid #9b41c9;
-      border-radius: 5px;
-      background: #fc69ff;
-      background: -webkit-gradient(linear, left top, left bottom, from(#fc69ff), to(#9b41c9));
-      background: -moz-linear-gradient(top, #fc69ff, #9b41c9);
-      background: linear-gradient(to bottom, #fc69ff, #9b41c9);
-      font: normal normal normal 29px impact;
-      color: #ffffff;
-      text-decoration: none;
-    }
-
-    .button:hover,
-    .button:focus {
-      border: 0px solid #c251fb;
-      background: #ff7eff;
-      background: -webkit-gradient(linear, left top, left bottom, from(#ff7eff), to(#ba4ef1));
-      background: -moz-linear-gradient(top, #ff7eff, #ba4ef1);
-      background: linear-gradient(to bottom, #ff7eff, #ba4ef1);
-      color: #ffffff;
-      text-decoration: none;
-    }
-
-
-    .button:active {
-      background: #9b41c9;
-      background: -webkit-gradient(linear, left top, left bottom, from(#9b41c9), to(#9b41c9));
-      background: -moz-linear-gradient(top, #9b41c9, #9b41c9);
-      background: linear-gradient(to bottom, #9b41c9, #9b41c9);
-    }
-  </style>
-  <title> dsk.pev.pl | wspieraj </title>
-
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1 {font-family: "Montserrat", sans-serif}
+img {margin-bottom: -7px}
+.w3-row-padding img {margin-bottom: 12px}
+</style>
 </head>
-
 <body>
-  <div id="prv-billboard"></div>
 
-  <div class="header">
-    <div id="texxit">
-      <a href="index.htm">
-        <h1>wspieraj</h1>
-      </a>
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-black w3-animate-top w3-xxlarge" style="display:none;padding-top:150px" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-black w3-xxlarge w3-padding w3-display-topright" style="padding:6px 24px">
+    <i class="fa fa-remove"></i>
+  </a>
+  <div class="w3-bar-block w3-center">
+    <a href="/index.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black">główna</a>
+    <a href="/cennik.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black">cennik</a>
+    <a href="/wspieraj.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black">WESPRZEĆ</a>
+    <a href="/contact.html" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Contact</a>
+  </div>
+</nav>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-content" style="max-width:1500px">
+
+<!-- Header -->
+<div class="w3-opacity">
+<span class="w3-button w3-xxlarge w3-white w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></span> 
+<div class="w3-clear"></div>
+<header class="w3-center w3-margin-bottom">
+  <h1><b>DAJSONEK.TK | Home</b></h1>
+  <p><b>A template made by w3.css for photographers.</b></p>
+  <p class="w3-padding-16"><button class="w3-button w3-black" onclick="myFunction()">Toggle Grid Padding</button></p>
+</header>
+</div>
+
+<!-- nazwa -->
+<div class="100STO">
+    <div class="TEXT">
+    WSPIERAJ
+      <br>
+   <a href=""><button>wspieraj</button></a>
     </div>
-    <div id="menui">
-      <li><a href="index.htm">głowna</a></li>
-      <li><a href="/cennik">sklep</a></li>
-      <li><a href="/wspieraj">wspieraj</a></li>
-      <li><a href="/artykul">juz niedlugo ;)</a></li>
-    </div>
-  </div>
-  </div>
   </div>
 
+<!-- End Page Content -->
+</div>
 
-  <div class="row">
-    <div class="col-3 col-s-3 ">
-      <ul>
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-light-grey w3-center w3-opacity w3-xlarge" style="margin-top:128px"> 
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+ 
+<script>
+// Toggle grid padding
+function myFunction() {
+  var x = document.getElementById("myGrid");
+  if (x.className === "w3-row") {
+    x.className = "w3-row-padding";
+  } else { 
+    x.className = x.className.replace("w3-row-padding", "w3-row");
+  }
+}
 
+// Open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.width = "100%";
+  document.getElementById("mySidebar").style.display = "block";
+}
 
-
-      </ul>
-    </div>
-
-    <div class="col-6 col-s-9">
-      <div id="text">
-        <h1>wspierajta mnie</h1>
-        <p>wesprzyj mnie klikając ten przycisk</p>
-
-        <div id="pay-btn">
-          <div id="api-btn">
-            <a class="button" href="koszyk.php">ZAPLAĆ</a>
-
-
-
-
-            <br>
-            <br>
-            <script>
-              var options = {
-                access_token: 'eop57k1boA7nnYPtewZ6KEXJyJADEwRT'
-
-              };
-              var s = document.createElement('script');
-              s.type = "text/javascript";
-              s.async = true;
-              s.src = "https://static.xsolla.com/embed/paystation/1.0.7/widget.min.js";
-              s.addEventListener('load', function (e) {
-                XPayStationWidget.init(options);
-              }, false);
-              var head = document.getElementsByTagName('head')[0];
-              head.appendChild(s);
-            </script>
-
-            <button data-xpaystation-widget-open>Buy Credits</button>
-
-
-
-
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-3 col-s-12">
-      <iframe src="imagesss.html" style="border: 0;" width="170px" height="620px" scrolling="no"></iframe>
-    </div>
-    <br>
-  </div>
-  </div>
-
-  <div class="footer">
-    <p>&copy; 2022 <a href="https://dsk.pev.pl">
-        <dsk>dsk.pev.pl</dsk>
-      </a></p>
-  </div>
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
 
 </body>
-
 </html>
