@@ -2,10 +2,7 @@
 
 
 
-RewriteRule index.html index.html
-RewriteRule contact.html kontakt
-RewriteRule wspieraj.html supports
-RewriteRule cennik.html prices
+
 
 
 ErrorDocument 404 /error/404.html
