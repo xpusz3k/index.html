@@ -1,63 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <style>
-    #pscc b {
-      font-size: 40px;
-      color: #008AC9;
-      font-weight: 5px;
-
-    }
-    #pscc c {
-      font-size: 40px;
-      color: #008AC9;
-    }
-
-  </style>
+  <title>test</title>
 </head>
+
 <body>
-  
-
-
-
-
-
-
-
-<script>
-  var options = {
-      access_token: 'eop57k1boA7nnYPtewZ6KEXJyJADEwRT', 
-      sandbox: 'true'
-  };
-  var s = document.createElement('script');
-  s.type = "text/javascript";
-  s.async = true;
-  s.src = "https://static.xsolla.com/embed/paystation/1.0.7/widget.min.js";
-  s.addEventListener('load', function (e) {
-      XPayStationWidget.init(options);
-  }, true);
-  var head = document.getElementsByTagName('head')[0];
-  head.appendChild(s);
-</script>
-
-<button data-xpaystation-widget-open>Buy Credits</button>
-
-
-
-
-
-
-
-
-  <br>
-
-
-</div>
- 
+  <form method="post" action="/paymentdajsonekkk/paysafecard/index.html" enctype="application/x-www-form-urlencoded" class="css-1ki54i">
+    <input type="hidden" name="type" value="PaySafeCard"><button class="chakra-stack css-1al3pgy" type="submit"><img
+        src="/img/paysafecard.svg" class="chakra-image css-gm2sw0">
+      <div class="chakra-stack css-jp20jv">
+        <p class="chakra-text css-h33me">PaySafeCard</p>
+      </div>
+    </button></form>
 </body>
-</html>
 
+</html>
